@@ -1,1 +1,17 @@
-Hi
+import pandas as pd
+import glob
+import numpy as np  # useful for many scientific computing in Python
+import pandas as pd # primary data structure library
+#!conda install -c anaconda xlrd --yes
+
+from openpyxl import load_workbook
+print('imported openpyxl')
+from openpyxl.styles import Font
+print('imported openpyxl.styles')
+from openpyxl.chart import BarChart, Reference
+
+df = pd.read_excel('https://github.com/adytas/Excell-automate-reports-and-graphs/blob/main/Dbbase.xlsx?raw=true')
+
+print('Data downloaded and read into a dataframe!')
+
+df.head()
